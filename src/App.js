@@ -1,23 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import Person from './Person';
 
 function App() {
+  let list = [{name:"Erick", age:37 , date:"Today", message:"Message1", key:"1", hobbies:["guitar", "bike", "bungee jumping"]},
+                {name:"Abby", age:12, date:"Yesterday", message:"Message2", key:"2", hobbies:["soap operas", "gossip"]},
+                {name:"Cuca", age:21,  date:"Tomorrow", message:"Message3", key:"3", hobbies:["sumo wrestling", "videogames", "crypto investing", "call of duty (ps5)"]},]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+       <ul>{list.map(l =><li key={l.key}> <Person props={l}/></li>)}</ul>
     </div>
   );
 }
