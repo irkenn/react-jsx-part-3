@@ -3,7 +3,7 @@ function Hobbies(props){
 
     return (
         <ul>
-            {props.props.map(h => <li>{h}</li>)}
+            {props.props.map(hobbie => <li>{hobbie}</li>)}
         </ul>
     );
 
